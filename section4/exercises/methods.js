@@ -16,5 +16,24 @@ Make sure to run the file with node in your command line.
 var lunchOrder = {
   dish: "BLT",
   beverage: "iced tea",
-  tableNumber: 47
-}
+  tableNumber: 47,
+  prepare: function() {
+    console.log("Your food is being prepared!");
+  },
+  complete: function() {
+    console.log("Your food is ready for pickup!");
+  }
+};
+
+console.log(lunchOrder.dish);
+console.log(lunchOrder.beverage);
+console.log(lunchOrder.tableNumber);
+
+lunchOrder.prepare();
+lunchOrder.complete();
+
+// Quick note I though about looping, but I stuck to the rules:
+// this is the code I'd use:
+//* for ( var elem in lunchOrder) {
+//  console.log(elem, lunchOrder);
+//  }
